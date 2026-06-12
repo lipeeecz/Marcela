@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pedido Oficial de Desculpas</title>
+
+<style>
+
+body{
+    background:#111;
+    color:white;
+    font-family:Arial, sans-serif;
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    text-align:center;
+    overflow:hidden;
+}
+
+.container{
+    max-width:800px;
+    padding:20px;
+    position:relative;
+    z-index:2;
+}
+
+h1{
+    margin-bottom:20px;
+}
+
+p{
+    font-size:18px;
+    line-height:1.6;
+}
+
+.botoes{
+    margin-top:30px;
+}
+
+button{
+    padding:14px 24px;
+    margin:10px;
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+.sim{
+    background:white;
+    color:black;
+}
+
+.simverde{
+    background:#39d353;
+    color:black;
+    font-weight:bold;
+}
+
+#segundaTela{
+    display:none;
+}
+
+img{
+    width:320px;
+    border-radius:15px;
+    margin-top:20px;
+}
+
+.subtitulo{
+    margin-top:15px;
+    font-size:20px;
+}
+
+/* IMAGENS TRISTES DA PRIMEIRA TELA */
+
+.fundo-triste{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+}
+
+.gato-fundo{
+    position:absolute;
+    left:40px;
+    bottom:30px;
+    width:240px;
+    opacity:0.28;
+}
+
+.cachorro-fundo{
+    position:absolute;
+    right:40px;
+    bottom:30px;
+    width:260px;
+    opacity:0.28;
+}
+
+.legenda-fundo{
+    position:absolute;
+    width:100%;
+    top:30px;
+    text-align:center;
+    opacity:0.5;
+    font-size:14px;
+}
+
+@media(max-width:700px){
+
+    .gato-fundo{
+        width:140px;
+        left:10px;
+    }
+
+    .cachorro-fundo{
+        width:150px;
+        right:10px;
+    }
+
+    img{
+        width:260px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div id="primeiraTela">
+
+    <div class="fundo-triste">
+
+        <div class="legenda-fundo">
+            Comissão julgadora avaliando seu voto:
+        </div>
+
+        <img src="gatotriste.jpg" class="gato-fundo">
+
+        <img src="cachorrotriste.jpg" class="cachorro-fundo">
+
+    </div>
+
+    <h1>Pedido Oficial de Desculpas</h1>
+
+    <p>
+    Olá.
+    </p>
+
+    <p>
+    Se você entrou aqui significa que eu fiz merda e estou tentando pedir desculpas. 🙂
+    </p>
+
+    <p>
+    Você perdoa eu?
+    </p>
+
+    <div class="botoes">
+
+        <button class="sim" onclick="aceitou()">
+            SIM
+        </button>
+
+        <button class="simverde" onclick="aceitou()">
+            SIM MAS EM VERDE
+        </button>
+
+    </div>
+
+</div>
+
+<div id="segundaTela">
+
+    <h1>Pedido Oficial de Desculpas</h1>
+
+    <img src="gato.gif" alt="gato arrependido">
+
+    <p class="subtitulo">
+        Eu após tentar ser fofo e ser bobo:
+    </p>
+
+    <p>
+        A intenção era fazer você SORRIR.
+    </p>
+
+    <p>
+        O resultado foi me transformar no maior boboca do BRASIL.
+    </p>
+
+    <p>
+        Portanto venho respeitosamente pedir desculpas.
+    </p>
+
+    <p>
+        Prometo não tentar mais agradar de jeito forçado e ser o mais natural possível com sua pessoa :)).
+    </p>
+
+    <p>
+        Com carinho,<br>
+        Luiz
+    </p>
+
+</div>
+
+</div>
+
+<script>
+
+function aceitou(){
+    document.getElementById("primeiraTela").style.display = "none";
+    document.getElementById("segundaTela").style.display = "block";
+}
+
+</script>
+
+</body>
+</html>
