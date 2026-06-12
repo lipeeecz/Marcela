@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -17,11 +18,11 @@ body{
     align-items:center;
     min-height:100vh;
     text-align:center;
-    overflow:hidden;
+    overflow-x:hidden;
 }
 
 .container{
-    max-width:800px;
+    max-width:900px;
     padding:20px;
     position:relative;
     z-index:2;
@@ -69,18 +70,13 @@ button:hover{
     display:none;
 }
 
-img{
-    width:320px;
-    border-radius:15px;
-    margin-top:20px;
-}
-
 .subtitulo{
     margin-top:15px;
     font-size:20px;
+    font-weight:bold;
 }
 
-/* IMAGENS TRISTES DA PRIMEIRA TELA */
+/* PRIMEIRA TELA */
 
 .fundo-triste{
     position:fixed;
@@ -107,10 +103,27 @@ img{
 .legenda-fundo{
     position:absolute;
     width:100%;
-    top:30px;
+    top:25px;
     text-align:center;
     opacity:0.5;
     font-size:14px;
+}
+
+/* SEGUNDA TELA */
+
+.imagens-desculpa{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.imagens-desculpa img{
+    width:220px;
+    border-radius:15px;
 }
 
 @media(max-width:700px){
@@ -125,12 +138,17 @@ img{
         right:10px;
     }
 
-    img{
-        width:260px;
+    .imagens-desculpa img{
+        width:170px;
+    }
+
+    p{
+        font-size:16px;
     }
 }
 
 </style>
+
 </head>
 
 <body>
@@ -139,76 +157,86 @@ img{
 
 <div id="primeiraTela">
 
-    <div class="fundo-triste">
+```
+<div class="fundo-triste">
 
-        <div class="legenda-fundo">
-            Comissão julgadora avaliando seu voto:
-        </div>
-
-        <img src="gatotriste.jpg" class="gato-fundo">
-
-        <img src="cachorrotriste.jpg" class="cachorro-fundo">
-
+    <div class="legenda-fundo">
+        Comissão julgadora avaliando seu voto:
     </div>
 
-    <h1>Pedido Oficial de Desculpas</h1>
+    <img src="gatotriste.jpg" class="gato-fundo">
 
-    <p>
-    Boa tarde Marcela YASMINI Machado.
-    </p>
+    <img src="cachorrotriste.jpg" class="cachorro-fundo">
 
-    <p> 
-    Se você entrou aqui significa que eu(LUIZ Felipe:))  fiz merda e estou tentando pedir desculpas. 🙂
-    </p>
+</div>
 
-    <p>
+<h1>Pedido Oficial de Desculpas</h1>
+
+<p>Olá.</p>
+
+<p>
+    Se você entrou aqui significa que eu fiz merda e estou tentando pedir desculpas. 🙂
+</p>
+
+<p>
     Você perdoa eu?
-    </p>
+</p>
 
-    <div class="botoes">
+<div class="botoes">
 
-        <button class="sim" onclick="aceitou()">
-            SIM
-        </button>
+    <button class="sim" onclick="aceitou()">
+        SIM
+    </button>
 
-        <button class="simverde" onclick="aceitou()">
-            SIM MAS EM VERDE
-        </button>
+    <button class="simverde" onclick="aceitou()">
+        SIM MAS EM VERDE
+    </button>
 
-    </div>
+</div>
+```
 
 </div>
 
 <div id="segundaTela">
 
-    <h1>Pedido Oficial de Desculpas</h1>
+```
+<h1>Pedido Oficial de Desculpas</h1>
+
+<div class="imagens-desculpa">
 
     <img src="gato.gif" alt="gato arrependido">
 
-    <p class="subtitulo">
-        Eu após tentar ser fofo e ser bobo:
-    </p>
+    <img src="euso.jpg" alt="eu">
 
-    <p>
-        A intenção era fazer você SORRIR.
-    </p>
+    <img src="emojiflor.webp" alt="emoji flor">
 
-    <p>
-        O resultado foi me transformar no maior boboca do BRASIL.
-    </p>
+</div>
 
-    <p>
-        Portanto venho respeitosamente pedir desculpas.
-    </p>
+<p class="subtitulo">
+    Eu após tentar ser fofo e ser bobo:
+</p>
 
-    <p>
-        Prometo não tentar mais agradar de jeito forçado e ser o mais natural possível com sua pessoa :)).
-    </p>
+<p>
+    A intenção era fazer você SORRIR.
+</p>
 
-    <p>
-        Com carinho,<br>
-        Luiz
-    </p>
+<p>
+    O resultado foi me transformar no maior boboca do BRASIL.
+</p>
+
+<p>
+    Portanto venho respeitosamente pedir desculpas.
+</p>
+
+<p>
+    Prometo não tentar mais agradar de jeito forçado e ser o mais natural possível com sua pessoa :)).
+</p>
+
+<p>
+    Com carinho,<br>
+    Luiz
+</p>
+```
 
 </div>
 
